@@ -1,4 +1,6 @@
-﻿using System;
+﻿// This program compare three numbers to find max and min number
+// HM Day 2
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

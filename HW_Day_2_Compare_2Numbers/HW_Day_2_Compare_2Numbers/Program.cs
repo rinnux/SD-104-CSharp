@@ -1,4 +1,7 @@
-﻿using System;
+﻿//This program compare two number for find the larger number
+//Home Work Day 2
+// Warin Yoongram
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +15,7 @@ namespace HW_Day_2_Compare_2Numbers
         {
 
             int firstNumber, secondNumber;
-            Console.WriteLine("This Program compare two number and display the large number");
+            Console.WriteLine("This Program compare two number and display the largest number");
             Console.WriteLine("<----------------------------------------------------------->");
             Console.WriteLine("Enter first number :");
             firstNumber = Convert.ToInt32(Console.ReadLine());
