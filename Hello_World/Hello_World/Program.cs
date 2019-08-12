@@ -1,4 +1,11 @@
-﻿using System;
+﻿
+/*********************************************************************
+ * Project Name : Hello_World                                        *
+ * Lab1--Hello_World                                                 *
+ * Author : Warin Yoongram                                           *
+ *********************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,3 +24,10 @@ namespace Hello_World
         }
     }
 }
+
+/* Result
+ Hello World
+The test
+
+
+ */
