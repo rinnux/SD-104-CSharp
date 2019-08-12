@@ -34,12 +34,12 @@ namespace Lab_3_BMI_Calculator
             }
             else if(dblBMI <= 24.9)
             {
-               Console.WriteLine("BMI < 24.9 -Normal");
+               Console.WriteLine("BMI  between 18.5 and 24.9 – Normal");
 
             }
             else if(dblBMI <= 29.9)
             {
-                Console.WriteLine("BMI < 18.5 -Overweight");
+                Console.WriteLine("BMI between 25 and 29.9 – Overweight");
 
             }
             else
