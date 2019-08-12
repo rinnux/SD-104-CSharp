@@ -1,4 +1,8 @@
-﻿using System;
+﻿//This program calculate the BMI
+// Lab3
+//Author Warin Yoongram
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,3 +55,33 @@ namespace Lab_3_BMI_Calculator
         }
     }
 }
+
+/*Test result
+Enter your Height in inches:
+70
+Enter your Weight in pounds:
+120
+Your BMI is 17.2163265306122
+
+BMI< 18.5 -Enter your Height in inches:
+60
+Enter your Weight in pounds:
+125
+Your BMI is 24.4097222222222
+BMI  between 18.5 and 24.9 - Normal
+
+Enter your Height in inches:
+72
+Enter your Weight in pounds:
+195
+Your BMI is 26.4438657407407
+BMI between 25 and 29.9 - Overweight
+
+Enter your Height in inches:
+65
+Enter your Weight in pounds:
+215
+Your BMI is 35.7739644970414
+BMI >=30 -Obese
+
+*/
