@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.IO;
 namespace CheckEmployee
 {
     class Program
@@ -18,11 +18,13 @@ namespace CheckEmployee
             currentDepartment(employee1);
             Console.WriteLine(employee1.department);
             Console.ReadLine();
+            employee1.setNames();
         }
 
         static void currentDepartment(employee isEmployed)
         {
-            if(isEmployed == null)
+          //  if(isEmployed.department == null)
+            if(string.IsNullOrEmpty(isEmployed.department))
             {
                 Console.WriteLine("He is in IT Department");
               
@@ -32,13 +34,20 @@ namespace CheckEmployee
                 Console.WriteLine("He is in HR Department");
             }
         }
+
+
+        class employee
+        {
+            public string name;
+            public string lastName;
+            public string department;
+        }
+
+        class private setNames()
+        {
+
+        }
     }
     
    
-    class employee
-    {
-        public string name;
-        public string lastName;
-        public string department;
-    }
 }
