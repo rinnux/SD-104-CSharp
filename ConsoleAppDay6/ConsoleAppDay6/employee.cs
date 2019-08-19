@@ -24,7 +24,7 @@ namespace ConsoleAppDay6
             }
 
             Console.WriteLine("First Name : " + firstName + " Last Name " + lastName + " Dept " + dept);
-            Console.ReadLine();
+          //  Console.ReadLine();
         }
     }
 }

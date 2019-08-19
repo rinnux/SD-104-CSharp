@@ -11,8 +11,13 @@ namespace ConsoleAppDay6
         static void Main(string[] args)
         {
             employee myEmployee = new employee("Warin","Yoongram","");
-            
+            card myCard = new card ("A", "Heart", 15);
+            Console.WriteLine(myCard.Value);
+            myCard.Value = 25;
+            Console.WriteLine(myCard.Value);
 
+
+            Console.ReadLine();
         }
     }
 }
