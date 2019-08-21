@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+﻿
+//This program calculate BMI using Input Validation
+// Warin Yoongram
+=======
 ﻿//This program calculate the BMI
 // Lab3
 //Author Warin Yoongram
+>>>>>>> 25b696e69d7bac0df77db1b587018b9d8d920af9
 
 using System;
 using System.Collections.Generic;
@@ -21,10 +27,21 @@ namespace Lab_3_BMI_Calculator
 
             //user input
             Console.WriteLine("Enter your Height in inches: ");
-            dblHeight = Convert.ToInt32(Console.ReadLine());
+
+            //validate
+            while(!double.TryParse(Console.ReadLine(),out dblHeight)|| dblHeight < 0)
+            {
+                Console.WriteLine("Not valid. Must be a positive rational number.");
+            }
+            //dblHeight = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter your Weight in pounds: ");
-            dblWeight = Convert.ToInt32(Console.ReadLine());
+
+            while (!double.TryParse(Console.ReadLine(), out dblWeight) || dblWeight < 0)
+            {
+                Console.WriteLine("Not valid. Must be a positive rational number.");
+            }
+           //  dblWeight = Convert.ToInt32(Console.ReadLine());
 
             //calculations
             dblBMI = (dblWeight * 703) / (dblHeight * dblHeight);
@@ -56,6 +73,22 @@ namespace Lab_3_BMI_Calculator
     }
 }
 
+<<<<<<< HEAD
+/*
+Enter your Height in inches:
+-4
+Not valid.Must be a positive rational number.
+45
+Enter your Weight in pounds:
+w
+Not valid.Must be a positive rational number.
+-47
+Not valid. Must be a positive rational number.
+15
+Your BMI is 5.20740740740741
+BMI< 18.5 -Underweight
+*/
+=======
 /*Test result
 Enter your Height in inches:
 70
@@ -85,3 +118,4 @@ Your BMI is 35.7739644970414
 BMI >=30 -Obese
 
 */
+>>>>>>> 25b696e69d7bac0df77db1b587018b9d8d920af9

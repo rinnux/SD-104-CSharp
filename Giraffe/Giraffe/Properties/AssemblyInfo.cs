@@ -5,19 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-<<<<<<< HEAD:Array2/Array2/Properties/AssemblyInfo.cs
-[assembly: AssemblyTitle("Array2")]
+[assembly: AssemblyTitle("Giraffe")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Array2")]
-=======
-[assembly: AssemblyTitle("CalAverMethod")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CalAverMethod")]
->>>>>>> 25b696e69d7bac0df77db1b587018b9d8d920af9:CalAverMethod/CalAverMethod/Properties/AssemblyInfo.cs
+[assembly: AssemblyProduct("Giraffe")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -28,11 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-<<<<<<< HEAD:Array2/Array2/Properties/AssemblyInfo.cs
-[assembly: Guid("9b201325-83b3-4874-b3ac-85550c0257bc")]
-=======
-[assembly: Guid("981d5e92-da91-4033-9eb1-4d662e042c95")]
->>>>>>> 25b696e69d7bac0df77db1b587018b9d8d920af9:CalAverMethod/CalAverMethod/Properties/AssemblyInfo.cs
+[assembly: Guid("4c1b66ef-3231-4689-ae1e-e54fab76c7d4")]
 
 // Version information for an assembly consists of the following four values:
 //
