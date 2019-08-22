@@ -25,7 +25,7 @@ namespace ConsoleAppEmployee
         {
             if (string.IsNullOrEmpty(emp.Dept))
             {
-                emp.Dept = "Sale";
+                emp.Dept = "IT";
             }
         }
 

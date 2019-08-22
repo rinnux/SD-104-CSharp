@@ -34,6 +34,8 @@ namespace HW_1___Variables_and_Arithmetic
             Console.WriteLine("The difference of two numbers is : " + dblResult);
             dblResult = firstNumber * secondNumber;
             Console.WriteLine("The product of two numbers is : " + dblResult);
+
+            //if denominator is not zero, Display a result
             if (secondNumber != 0)
             {
                 dblResult = firstNumber / secondNumber;
