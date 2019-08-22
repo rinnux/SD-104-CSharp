@@ -12,6 +12,7 @@ namespace CommandPrompt
         int columns;
 
         String[] screenText;
+        
 
         public CommandPrompt(int height, int columns)
         {
