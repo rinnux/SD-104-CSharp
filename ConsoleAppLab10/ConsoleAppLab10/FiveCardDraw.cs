@@ -8,7 +8,7 @@ namespace ConsoleAppLab10
 {
     class FiveCardDraw
     {
-        public List<Card> PlayerHand {get; set;}
+        public List<Card> PlayerHand { get; set; }
         public DeckOfCards deckOfCards { get; set; }
         public FiveCardDraw()
         {
@@ -32,25 +32,49 @@ namespace ConsoleAppLab10
                 ShowPlayerHand();
                 Console.WriteLine("Type the number of the card in your hand and hit enter to toggle between keep/descard. Type 'D' to finalize Discard.");
                 userChoice = Console.ReadLine();
-                while (userChoice != "D" && !int.TryParse(userChoice, out DiscardMe))
+                if (userChoice.ToLower() == "exit")
+                { 
+                    System.Environment.Exit(0);
+                }
+            while (userChoice != "D" && !int.TryParse(userChoice, out DiscardMe))
                 {
                     Console.WriteLine("Invalid choice. Try Again: ");
                     userChoice = Console.ReadLine();
                 }
-                if (userChoice!"D" && discardMe > 0 && DiscardMe < 6)
+                if (userChoice!="D" && DiscardMe > 0 && DiscardMe < 6)
                     {
-                    Discard[discardMe - 1] = Discard[discardMe - 1] == true ? false : true;
+                    Discard[DiscardMe - 1] = Discard[DiscardMe - 1] == true ? false : true;
                 }
-                } while (userChoice! = "D") ;
-            }
-            
+            } while (userChoice!= "D");
+            FinalizeDiscard();
+            ShowPlayerHand();
         }
+
+        private void FinalizeDiscard()
+        {
+            for (int n = 0;n < PlayerHand.Count;n++)
+            {
+                if (Discard [n])
+                {
+                    deckOfCards.Deck.Add(PlayerHand[n]);
+                    PlayerHand[n] = deckOfCards.Deal();
+                }
+            }
+            Discard = new bool[5] { false, false, false, false, false };
+        }
+    
+
         public void ShowPlayerHand()
         {
-            for (int n = 0; n<PlayerHand.Count;n++)
+            for (int n = 0; n < PlayerHand.Count; n++)
             {
-                Console.WriteLine("Card #" + (n + 1) + " : " + PlayerHand[n]);
+                if (!Discard[n])
+                    Console.WriteLine("Card #" + (n + 1) + " : " + PlayerHand[n]);
+                else
+                    Console.WriteLine("Card #" + (n + 1) + " : " + PlayerHand[n] + "<-------Discard");
             }
         }
     }
+
 }
+
