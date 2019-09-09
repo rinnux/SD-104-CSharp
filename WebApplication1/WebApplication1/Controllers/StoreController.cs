@@ -12,10 +12,14 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult StoreView()
+        public IActionResult OpenStore()
         {
             return View();
         }
+  /*      public IActionResult CloseStore()
+        {
+            return View();
+        }*/
 
     }
 }
