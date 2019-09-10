@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore", "MusicStore.csproj", "{C6800BCD-DE27-4020-9531-7A00CD3F3EFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore", "MusicStore.csproj", "{3D37FDA6-1FBD-44DA-A113-8CB433BF94C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C6800BCD-DE27-4020-9531-7A00CD3F3EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6800BCD-DE27-4020-9531-7A00CD3F3EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6800BCD-DE27-4020-9531-7A00CD3F3EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6800BCD-DE27-4020-9531-7A00CD3F3EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D37FDA6-1FBD-44DA-A113-8CB433BF94C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D37FDA6-1FBD-44DA-A113-8CB433BF94C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D37FDA6-1FBD-44DA-A113-8CB433BF94C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D37FDA6-1FBD-44DA-A113-8CB433BF94C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D01830A8-7B16-4276-BDC9-268237B7E9D5}
+		SolutionGuid = {07859CFA-A2AC-42A8-8429-5197E58CB1CF}
 	EndGlobalSection
 EndGlobal

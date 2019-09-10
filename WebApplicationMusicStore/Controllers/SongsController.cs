@@ -7,16 +7,22 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebApplicationMusicStore.Data;
 using WebApplicationMusicStore.Models;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace WebApplicationMusicStore.Controllers
 {
     public class SongsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IHostingEnvironment _env;
 
-        public SongsController(ApplicationDbContext context)
+
+        public SongsController(ApplicationDbContext context, IHostingEnvironment env)
         {
             _context = context;
+            _env = env;
         }
 
         // GET: Songs
@@ -54,8 +60,19 @@ namespace WebApplicationMusicStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Artist,Album,ReleaseDate,Genre,ImagePath,Price")] Song song)
+        public async Task<IActionResult> Create([Bind("Id,Title,Artist,Album,ReleaseDate,Genre,ImagePath,Price,IsActive,IsFeatured")] Song song,IFormFile file)
         {
+            if (file != null)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var path = _env.WebRootPath + "\\uploads\\albums\\" + fileName;
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+                song.ImagePath = "uploads/albums/" + fileName;
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(song);
@@ -86,8 +103,19 @@ namespace WebApplicationMusicStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Artist,Album,ReleaseDate,Genre,ImagePath,Price")] Song song)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Artist,Album,ReleaseDate,Genre,ImagePath,Price,IsActive,IsFeatured")] Song song, IFormFile file)
         {
+            if (file != null)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var path = _env.WebRootPath + "\\uploads\\albums\\" + fileName;
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+                song.ImagePath = "uploads/albums/" + fileName;
+            }
             if (id != song.Id)
             {
                 return NotFound();

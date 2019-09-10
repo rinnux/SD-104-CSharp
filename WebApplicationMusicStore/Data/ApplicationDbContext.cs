@@ -18,5 +18,6 @@ namespace WebApplicationMusicStore.Data
             base.OnModelCreating(builder);
         }
         public DbSet<WebApplicationMusicStore.Models.Song> Songs { get; set; }
+        public DbSet<WebApplicationMusicStore.Models.Customer> Customers { get; set; }
     }
 }
